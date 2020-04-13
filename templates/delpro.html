@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>delpro</title>
+		<link href="/static/all.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<form class="form" action="{{ url_for('delpro') }}" method="post">
+			<div class="row">FNST加班管理</div>
+			<div class="row">请选择需要删除的项目组名字</div>
+			<div class="row">
+			<span>项目组：</span>
+			<select name="project">
+			{% for value in projects %}
+			<option value="{{value}}">{{value}}</option>
+			{% endfor %}
+			</select>
+			</div>
+			<div class="row">
+			<input type="submit" value="删 除"/>
+			<a href="https://www.chelly.design/manager">返 回</a>
+			</div>
+		</form>
+	</body>
+</html>

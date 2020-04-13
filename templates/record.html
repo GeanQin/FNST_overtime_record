@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>record</title>
+	</head>
+
+	<body>
+		<form action="{{ url_for('record') }}" method="post">
+			<table>
+				<tbody>
+					<tr>
+					<td>工号：</td>
+					<td><input type="text" placeholder="000000" name="work_id" /></td>
+					</tr>
+					<tr>
+					<td>year：</td>
+					<td><input type="text" placeholder="2019" name="over_year" /></td>
+					</tr>
+					<tr>
+					<td>month：</td>
+					<td><input type="text" placeholder="01" name="over_month" /></td>
+					</tr>
+					<tr>
+					<td>day：</td>
+					<td><input type="text" placeholder="01" name="over_day" /></td>
+					</tr>
+					<tr>
+					<td>类型：</td>
+					<td><input type="text" placeholder="平日加班、周末加班" name="over_type" /></td>
+					</tr>
+					<tr>
+					<td>起点：</td>
+					<td><input type="text" placeholder="20:00" name="time_start" /></td>
+					</tr>
+					<tr>
+					<td>终点：</td>
+					<td><input type="text" placeholder="22:00" name="time_end" /></td>
+					</tr>
+					<tr>
+					<td>计薪：</td>
+					<td><input type="text" placeholder="2" name="time_pay" /></td>
+					</tr>
+					<tr>
+					<td>调休：</td>
+					<td><input type="text" placeholder="0" name="time_holiday" /></td>
+					</tr>
+					<tr>
+					<td>project：</td>
+					<td><input type="text" placeholder="EulerOS" name="user_project" /></td>
+					</tr>
+					<tr>
+					<td></td>
+					<td><input type="submit" value="录入"/></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</body>
+</html>

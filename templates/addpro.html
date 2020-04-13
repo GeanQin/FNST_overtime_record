@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>addpro</title>
+		<link href="/static/all.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<form class="form" action="{{ url_for('addpro') }}" method="post">
+			<div class="row">FNST加班管理</div>
+			<div class="row">请输入需要添加的项目组名字</div>
+			<div class="row">
+			<span>项目组：</span>
+			<input type="text" name="project" />
+			</div>
+			<div class="row">
+			<input type="submit" value="添 加"/>
+			<a href="https://www.chelly.design/manager">返 回</a>
+			</div>
+		</form>
+	</body>
+</html>

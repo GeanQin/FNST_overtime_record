@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>register</title>
+		<link href="/static/all.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<form class="form" action="{{ url_for('register') }}" method="post">
+			<div class="row">FNST加班管理</div>
+			<div class="row">
+			<span>工号：</span>
+			<input type="text" placeholder="000000" name="work_id" />
+			</div>
+			<div class="row">
+			<span>密码：</span>
+			<input type="password" name="password" />
+			</div>
+			<div class="row">
+			<input type="submit" value="注 册"/>
+			<a href="https://www.chelly.design/login">返 回</a>
+			</div>
+		</form>
+	</body>
+</html>

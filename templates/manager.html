@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>manager</title>
+		<link href="/static/all.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		{% if work_id==None %}
+		<div class="search" style="margin:20px;">
+			<a href="https://www.chelly.design/login">请登录...</a>
+		</div>
+		{% else %}
+		<form class="search" action="{{ url_for('manager') }}" method="post">
+			<div style="margin:30px;">FNST加班管理</div>
+			<span>请输入您想查询的项目组</span>
+			<select name="user_project">
+				{% for value in projects %}
+				<option value="{{value}}">{{value}}</option>
+				{% endfor %}
+			</select>
+			<a href="https://www.chelly.design/addpro">添加项目组</a>
+			<a href="https://www.chelly.design/delpro">删除项目组</a><br/>
+			<span>start year:</span>
+			<select name="start_year">
+				<option value="2018">2018</option>
+				<option value="2019">2019</option>
+				<option value="2020">2020</option>
+				<option value="2021">2021</option>
+			</select>
+			<span>start month:</span>
+			<select name="start_month">
+				<option value="01">01</option>
+				<option value="02">02</option>
+				<option value="03">03</option>
+				<option value="04">04</option>
+				<option value="05">05</option>
+				<option value="06">06</option>
+				<option value="07">07</option>
+				<option value="08">08</option>
+				<option value="09">09</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+			</select>
+			<span>start day:</span>
+			<select name="start_day">
+				<option value="01">01</option>
+				<option value="02">02</option>
+				<option value="03">03</option>
+				<option value="04">04</option>
+				<option value="05">05</option>
+				<option value="06">06</option>
+				<option value="07">07</option>
+				<option value="08">08</option>
+				<option value="09">09</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+				<option value="26">26</option>
+				<option value="27">27</option>
+				<option value="28">28</option>
+				<option value="29">29</option>
+				<option value="30">30</option>
+				<option value="31">31</option>
+			</select><br/>
+			<span>end year:</span>
+			<select name="end_year">
+				<option value="2018">2018</option>
+				<option value="2019">2019</option>
+				<option value="2020">2020</option>
+				<option value="2021">2021</option>
+			</select>
+			<span>end month:</span>
+			<select name="end_month">
+				<option value="01">01</option>
+				<option value="02">02</option>
+				<option value="03">03</option>
+				<option value="04">04</option>
+				<option value="05">05</option>
+				<option value="06">06</option>
+				<option value="07">07</option>
+				<option value="08">08</option>
+				<option value="09">09</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+			</select>
+			<span>end day:</span>
+			<select name="end_day">
+				<option value="01">01</option>
+				<option value="02">02</option>
+				<option value="03">03</option>
+				<option value="04">04</option>
+				<option value="05">05</option>
+				<option value="06">06</option>
+				<option value="07">07</option>
+				<option value="08">08</option>
+				<option value="09">09</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+				<option value="26">26</option>
+				<option value="27">27</option>
+				<option value="28">28</option>
+				<option value="29">29</option>
+				<option value="30">30</option>
+				<option value="31">31</option>
+			</select><br/>
+			<input type="submit" value="确定"/>
+		</form>
+		<div class="search">
+		{% for value in allrec %}
+		{{value}}<br/>
+		{% endfor %}
+		{% if allrec!='' %}
+		<a href="https://www.chelly.design/download">下载</a>
+		{% endif %}
+		</div>
+		{% endif %}
+	</body>
+</html>
